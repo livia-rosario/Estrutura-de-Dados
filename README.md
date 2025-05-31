@@ -37,7 +37,7 @@ Antes de compilar e executar o projeto, verifique se você possui os seguintes i
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/livia-rosario/healthsys.git
+git clone https://github.com/livia-rosario/Estrutura-de-Dados
 cd healthsys
 ```
 
