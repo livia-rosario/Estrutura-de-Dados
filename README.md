@@ -38,7 +38,7 @@ Antes de compilar e executar o projeto, verifique se você possui os seguintes i
 
 ```bash
 git clone https://github.com/livia-rosario/Estrutura-de-Dados
-cd healthsys
+cd cd Estrutura-de-Dados
 ```
 
 2. Compile o projeto usando `make`:
