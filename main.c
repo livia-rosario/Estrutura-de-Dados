@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h> // Para EXIT_SUCCESS e EXIT_FAILURE
 
-// Nossos módulos
+/* Nossos módulos */
 #include "paciente.h"    // Embora não usemos diretamente Paciente aqui, os outros módulos dependem dele.
 #include "bd_paciente.h" // Para gerenciar o banco de dados de pacientes
 #include "interface.h"   // Para todas as interações com o usuário
 
-// Constantes definidas para o programa principal
+/* Constantes definidas para o programa principal */
 #define ARQUIVO_CSV "bd_paciente.csv"
 #define ITENS_POR_PAGINA 10
 
@@ -14,17 +14,15 @@ int main() {
     BDPaciente banco_de_dados; // Nossa estrutura principal para armazenar os dados
     char opcao_menu;
 
-    // 1. Inicializar o TAD BDPaciente
+    /* 1. Inicializar o TAD BDPaciente */
     inicializar_bd(&banco_de_dados); // Define a quantidade_atual de pacientes como 0.
 
-    // 2. Carregar os dados do arquivo CSV para a memória
+    /* 2. Carregar os dados do arquivo CSV para a memória */
     if (!carregar_dados_csv(&banco_de_dados, ARQUIVO_CSV)) {
         exibir_mensagem_erro("Falha ao carregar dados do arquivo CSV. Verifique se 'bd_paciente.csv' existe e esta formatado corretamente.");
         return EXIT_FAILURE; // Termina o programa se não conseguir carregar os dados
     }
-    // Opcional: Mensagem de sucesso no carregamento
-    // exibir_mensagem("Dados dos pacientes carregados com sucesso!");
-    // pausar_execucao();
+   
 
     // 3. Loop principal do menu
     do {
