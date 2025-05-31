@@ -23,7 +23,7 @@ void inicializar_bd(BDPaciente* bd) {
         bd->quantidade_atual = 0; // Define a quantidade de pacientes como zero.
     }
 }
- s
+
 /* Carrega dados do CSV. Retorna 1 em sucesso, 0 em erro. */
 int carregar_dados_csv(BDPaciente* bd, const char* nome_arquivo_csv) {
     FILE* arquivo;
