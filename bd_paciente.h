@@ -1,3 +1,4 @@
+/* Evitar que o conteúdo do header seja incluído mais de uma vez no mesmo arquivo (o que causaria erros de compilação). */
 #ifndef BD_PACIENTE_H
 #define BD_PACIENTE_H
 

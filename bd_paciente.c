@@ -23,7 +23,7 @@ void inicializar_bd(BDPaciente* bd) {
         bd->quantidade_atual = 0; // Define a quantidade de pacientes como zero.
     }
 }
-
+ s
 /* Carrega dados do CSV. Retorna 1 em sucesso, 0 em erro. */
 int carregar_dados_csv(BDPaciente* bd, const char* nome_arquivo_csv) {
     FILE* arquivo;
@@ -177,9 +177,9 @@ void consultar_pacientes_por_cpf(const BDPaciente* bd, const char* prefixo_cpf_o
     }
 }
 
-/* Imprime lista de pacientes paginada. [cite: 33] */
+/* Imprime lista de pacientes paginada.*/
 void imprimir_lista_pacientes_paginada(const BDPaciente* bd, int itens_por_pagina) {
-    if (bd == NULL) {
+    if (bd == NULL) { // Verifica se bd é nula, o que não deveria ocorrer.
         fprintf(stderr, "Erro: BDPaciente eh nulo em imprimir_lista_pacientes_paginada.\n");
         return;
     }
@@ -222,10 +222,10 @@ void imprimir_lista_pacientes_paginada(const BDPaciente* bd, int itens_por_pagin
                 printf("Retornando ao menu...\n");
                 break; // Sai do loop for, interrompendo a listagem
             }
-            
+
             /* Se não for 'q' ou 'Q', continua para a próxima página, reimprimindo o cabeçalho para clareza */
             printf("-------------------------------------------------------------------------------\n");
-            printf("%-4s %-15s %-30s %-6s %-10s\n", "ID", "CPF", "Nome", "Idade", "Data Cadastro"); // [cite: 34]
+            printf("%-4s %-15s %-30s %-6s %-10s\n", "ID", "CPF", "Nome", "Idade", "Data Cadastro"); 
             printf("-------------------------------------------------------------------------------\n");
         }
     }
