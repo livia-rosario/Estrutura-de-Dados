@@ -209,8 +209,8 @@ void imprimir_lista_pacientes_paginada(const BDPaciente* bd, int itens_por_pagin
             /* Se o usuário digitar 'q' e depois Enter, getchar() pegará 'q' na primeira vez.
              Se só der Enter, getchar() pegará o '\n'.
              Para uma pausa mais robusta, pode-se ler a linha toda ou usar funções da interface.
-            Vamos consumir um possível '\n' extra do buffer, caso o usuário só pressione Enter
-            if (ch != '\n' && ch != EOF) {  Se não foi só Enter, pega o próximo char (que seria o \n) */
+            Vamos consumir um possível '\n' extra do buffer, caso o usuário só pressione Enter */
+            if (ch != '\n' && ch != EOF) { //  Se não foi só Enter, pega o próximo char (que seria o \n) */
                  char next_ch = getchar();
                  if (next_ch != '\n' && next_ch != EOF && (ch == 'q' || ch == 'Q')) {
                     // Garante que se o usuário digitou 'q' ou 'Q' e um enter, o enter extra é consumido
